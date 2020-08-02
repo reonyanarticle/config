@@ -4,7 +4,7 @@
 autoload -U promptinit; promptinit
 prompt pure
 
-export GOPATH=/Users/yoshidatomoya/go  # GOPATHにすると決めた場所
+export GOPATH= $HOME/go  # GOPATHにすると決めた場所
 export PATH=$GOPATH/bin:$PATH
 
 # #補完のリスト表示時にls --colorと同じカラースキームを使用
@@ -79,7 +79,7 @@ function history-all { history -E 1 }
 # PROMPT='[%n@%m:%~]$(__git_ps1 " (%s)")%# '
 
 #Gitifyのパス
-export PATH=/Users/yoshidatomoya/Gitify/:$PATH
+export PATH=$HOME/Gitify/:$PATH
 
 
 export PATH="/usr/local/sbin:$PATH"
@@ -88,20 +88,7 @@ export PATH="/usr/local/sbin:$PATH"
 #yarnのパス
 export PATH="$HOME/.yarn/bin:$PATH"
 
-#pythonのパス
-# added by Anaconda3 5.2.0 installer
-export PATH="/Users/yoshidatomoya/anaconda3/bin:$PATH"
-export PATH=$HOME/.nodebrew/current/bin:$PATH
-alias chrome="open -a \"/Applications/Google Chrome.app\""
 
-# opam configuration
-test -r /Users/yoshidatomoya/.opam/opam-init/init.sh && . /Users/yoshidatomoya/.opam/opam-init/init.sh > /dev/null 2> /dev/null || true
-export PATH="/usr/local/opt/php@7.2/bin:$PATH"
-export PATH="/usr/local/opt/php@7.2/sbin:$PATH"
-export PATH="/usr/local/opt/bzip2/bin:$PATH"
-export PATH="/usr/local/opt/bzip2/bin:$PATH"
-export PATH="$HOME/.rbenv/bin:$PATH"
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 # iTerm2の色設定
 export CLICOLOR=1
@@ -115,27 +102,3 @@ blue=$'\e[34m' # Blue
 purple=$'\e[35m' # Purple
 cyan=$'\e[36m' # Cyan
 white=$'\e[37m' # White
-
-
-
-# NVMの設定
-export NVM_DIR="$HOME/.nvm"
-  [ -s "/usr/local/opt/nvm/nvm.sh" ] && . "/usr/local/opt/nvm/nvm.sh"  # This loads nvm
-  [ -s "/usr/local/opt/nvm/etc/bash_completion" ] && . "/usr/local/opt/nvm/etc/bash_completion"  # This loads nvm bash_completion
-
-
-# The next line updates PATH for the Google Cloud SDK.
-if [ -f '/Users/yoshidatomoya/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/yoshidatomoya/google-cloud-sdk/path.zsh.inc'; fi
-
-# The next line enables shell command completion for gcloud.
-if [ -f '/Users/yoshidatomoya/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/yoshidatomoya/google-cloud-sdk/completion.zsh.inc'; fi
-
-# tabtab source for serverless package
-# uninstall by removing these lines or running `tabtab uninstall serverless`
-[[ -f /Users/yoshidatomoya/OGP/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/yoshidatomoya/OGP/node_modules/tabtab/.completions/serverless.zsh
-# tabtab source for sls package
-# uninstall by removing these lines or running `tabtab uninstall sls`
-[[ -f /Users/yoshidatomoya/OGP/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/yoshidatomoya/OGP/node_modules/tabtab/.completions/sls.zsh
-# tabtab source for slss package
-# uninstall by removing these lines or running `tabtab uninstall slss`
-[[ -f /Users/yoshidatomoya/OGP/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/yoshidatomoya/OGP/node_modules/tabtab/.completions/slss.zsh
